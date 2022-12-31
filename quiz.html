@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando seu conehcimento</title>
+    <script>
+        const numQuestoes = 8;
+
+function corrigir() {
+
+
+
+
+    var nome = document.getElementById("nome").value;
+
+
+    if (nome == "") {
+        alert("Por favor, digite seu nome!!");
+    } else {
+
+
+
+        var contCertas = 0;
+        var contMarcadas = 0;
+        var questao = document.getElementsByClassName("questao");
+
+
+
+        for (var i = 0; i < questao.length; i++) {
+            var certa = questao[i].getElementsByClassName("opCerta");
+            if (certa[0].checked) contCertas++;
+            var opcoes = questao[i].getElementsByClassName("opcao");
+            for (var j = 0; j < opcoes.length; j++) {
+                if (opcoes[j].checked) contMarcadas++;
+            }
+        }
+
+
+
+
+        if (contMarcadas === numQuestoes) {
+            if (contCertas < 4) resultado.innerHTML = "Estude Mais!!, " + nome + ", você acertou " + contCertas + " questões! Revise o conteúdo.";
+            else if (contCertas < 7) resultado.innerHTML = "Você acertou " + contCertas + " questões, " + nome + ". Estude mais um pouco!";
+            else resultado.innerHTML = "Parabéns, " + nome + "! Você acertou " + contCertas + " questões!";
+        } else resultado.innerHTML = nome + ", é nessessario responder todas as questões para a correção!";
+    }
+}
+    </script>
+
+    <style>
+       body{
+        background-image: url(https://1.bp.blogspot.com/_-c5xNSKGJ0s/TCHmw-rKNEI/AAAAAAAABig/bU0pdPBWpJA/s1600/Gal%C3%A1xia+an%C3%A3+do+Escultor.jpg);
+        }
+#Perguntas{
+    background-image: url(https://1.bp.blogspot.com/_-c5xNSKGJ0s/TCHmw-rKNEI/AAAAAAAABig/bU0pdPBWpJA/s1600/Gal%C3%A1xia+an%C3%A3+do+Escultor.jpg);
+    padding: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    box-shadow: 10px 10px 50px black;
+    border: 8px rgb(61, 61, 150);
+    
+}
+h1{
+    color: #382299;
+    font-size: 30px;
+    text-align: center;
+}
+p{
+    text-indent: 20px;
+}
+#nome{
+    background-color: #8280a2;;
+    border: 2px solid #0086ed;
+    border-radius: 15px;
+    color: #7e93ff;
+    caret-color: #9ac7ff;
+    height: 25px;
+    width: 150px;
+    font-size: 18px;
+    font-family: 'Trebuchet MS';
+}
+#sinapse{
+    height: 150px; 
+    width: 400px; 
+    margin-left: 10%; 
+    border: 2px solid #223699;
+}
+.questao{
+    padding: 15px;
+    background-image: url(https://i1.wp.com/www.multarte.com.br/wp-content/uploads/2019/01/fundo-tumblr-preto29.jpg?fit=696%2C464&ssl=1);
+    color: aliceblue;
+    font-size: 20px;
+    
+}
+#resultado{
+    text-align: center;
+    font-size: 30px;
+    color: #0c26e4;
+}
+#correcao{
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+    background-color: #dee0f9;
+    border: 2px solid #3c6df3;
+    border-radius: 15px;
+    width: 100px;
+    height: 50px;
+    margin-left: 45%;
+
+}
+body{
+            background-color: black;
+        }
+        #menu{
+   
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+.menuBotao{
+    background-color: transparent;
+    border: 5px solid #0f064d;
+    border-radius: 15px;
+    font-size: 18px;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+    padding: 12px;
+    margin: 10px;
+    display: inline-block;
+
+}
+.menuBotao:hover{
+
+    background-color: #f7f9ff;
+    border-radius: 25px;
+    transform: scale(1.1);
+    transition: all 1s;
+}
+.quadro{
+    width: 90%;
+        height: 100px;
+        box-shadow: inset 0 0 1em rgb(76, 75, 82), 0 0 1em rgb(68, 0, 255);
+        border-radius: 500px;
+        text-align: center;
+        background-image: url(https://media3.giphy.com/media/JCUyexH8Zaf8k/giphy.gif?cid=ecf05e47vvirenjklvh6lznum4thabj84pmus3b0a46nval8&rid=giphy.gif&ct=g);
+        margin-left: 79px;
+    margin-right: 79px;
+ 
+}
+.digite{
+   color: #dee0f9;
+   font-size: 45px;
+}
+
+h1{
+    background-color: #dee0f9;
+    font-size: 60px;
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="quadro">
+
+        <nav id="menu">
+        
+            <ul>
+                <li class="menuBotao"><b><a href="index.html">Sistema Solar</a></b></li>
+    
+                <li class="menuBotao"><b><a href="Planetas.html">Planetas</a></b></li>
+                <li class="menuBotao"><b><a href="estrelas.html">Estrelas</a></b></li>
+                <li class="menuBotao"><b><a href="Astros.html">Astros</a></b></li>
+                <li class="menuBotao"><b><a href="curiosidade.html">Curiosidades</a></b></li>
+                <li class="menuBotao"><b><a href="quiz.html">Teste seu conhecimento</a></b></li>
+            </ul>
+        </nav>
+    </div>
+    <br>
+    <br>
+    <div id="Perguntas">
+        <h1> Teste seu conhecimento! </h1>
+        <br>
+        <br>
+        <form>
+            <label for="nome" style="margin-left: 400px;" class="digite">Digite seu nome:  <input type="text" id="nome"></label><br><br>
+            <div class="questao">
+                <p class="tt">1. Qual o maior planeta do nosso sistema Solar?
+                </p>
+                <label><input type="radio" class="opcao" name="questaoUm"> Marte</label><br>
+                <label><input type="radio" class="opcao" name="questaoUm"> Terra</label><br>
+                <label><input type="radio" class="opCerta opcao" name="questaoUm">Júpiter</label><br>
+                <label><input type="radio" class="opcao" name="questaoUm">Urano</label><br>
+                <label><input type="radio" class="opcao" name="questaoUm">Saturno</label>
+            </div>
+            <br>
+            <br>
+            <div class="questao">
+                <p>2.Qual o planeta com menor temperatura?</p>
+             
+                <label><input type="radio" class="opCerta opcao" name="questaoDois"> Urano</label><br>
+                <label><input type="radio" class="opcao" name="questaoDois">Júpiter</label><br>
+                <label><input type="radio" class="opcao" name="questaoDois">Mercúrio</label><br>
+                <label><input type="radio" class="opcao" name="questaoDois"> Terra</label><br>
+                <label><input type="radio" class="opcao" name="questaoDois"> Marte</label><br>
+            </div>
+            <br>
+            <br>
+            <div class="questao">
+                <p>3. Qual planeta tem mais luas?</p>
+                <label><input type="radio" class="opcao" name="questaoTres">Neturno</label><br>
+                <label><input type="radio" class="opCerta opcao" name="questaoTres">Júpiter.</label><br>
+                <label><input type="radio" class="opcao" name="questaoTres">Saturno</label><br>
+                <label><input type="radio" class="opcao" name="questaoTres">Vênus</label>
+            </div>
+            <br>
+            <br>
+            <div class="questao">
+                <p>4. Qual o planeta tem os dias mais longos</p>
+                <label><input type="radio" class="opcao" name="questaoQuatro">Mercúrio<br></label>
+                <label><input type="radio" class="opcao" name="questaoQuatro"> Terra</label><br>
+                <label><input type="radio" class="opcao" name="questaoQuatro">Saturno</label><br>
+                <label><input type="radio" class="opCerta opcao" name="questaoQuatro">Vênus</label><br>
+                <label><input type="radio" class="opcao" name="questaoQuatro">Júpiter</label>
+            </div>
+            <br>
+            <br>
+            <div class="questao">
+                <p>5. Verdadeiro ou falso? Vênus tem mais pressão atmosférica do que a Terra? </p>
+                <label><input type="radio" class="opcao" name="questaoCinco">Falso</label><br>
+                <label><input type="radio" class="opCerta opcao" name="questaoCinco">Verdadeiro</label>
+            </div>
+            <br>
+            <br>
+            <div class="questao">
+                <p>6. Qual é o planeta mais brilhante no céu à noite?</p>
+    
+                <label><input type="radio" class="opcao" name="questaoSeis">Marte</label><br>
+                <label><input type="radio" class="opCerta opcao" name="questaoSeis">Vênus</label><br>
+                <label><input type="radio" class="opcao" name="questaoSeis">Mercúrio</label><br>
+                <label><input type="radio" class="opcao" name="questaoSeis">Júpiter</label><br>
+                <label><input type="radio" class="opcao" name="questaoSeis">Saturno</label>
+            </div>
+            <br>
+            <br>
+            <div class="questao">
+                <p>7.(CieBio)Sobre os planetas do sistema solar analise os itens abaixo, depois marque a opção correta.</p>
+                <ul style="list-style: none;">
+                    <li>I. A Terra, juntamente com outros planetas, faz parte de uma região do universo a que se deu o nome de sistema solar.
+                    </li>
+                    <li>II. Embora os planetas tenham coisas em comum, como, por exemplo, serem constituídos das mesmas substâncias químicas, eles possuem massas, tamanhos, atmosferas e temperaturas diferentes.</li>
+            
+                </ul>
+                <p>Assinale a alternativa que associa corretamente os tipos de fibras musculares com sua respectiva
+                    ação.</p>
+                <label><input type="radio" class="opCerta opcao" name="questaoSete">a)  I e II</label><br>
+                <label><input type="radio" class="opcao" name="questaoSete">  b)  somente I</label><br>
+                <label><input type="radio" class="opcao" name="questaoSete">c) somente II</label><br>
+            </div>
+            <br>
+            <br>
+            <div class="questao">
+                <p>8. Que planeta é apelidado o 'Planeta Vermelho'?
+                </p>
+                
+                <label><input type="radio" class="opcao" name="questaoOito">Netuno</label><br>
+                <label><input type="radio" class="opcao" name="questaoOito">Mercúrio
+                   </label><br>
+                <label><input type="radio" class="opCerta opcao" name="questaoOito">Marte</label><br>
+                <label><input type="radio" class="opcao" name="questaoOito">Saturno</label>
+            </div>
+            <br>
+            <br>
+            <p id="resultado"></p>
+            <button id="correcao" type="button" onclick="corrigir()">Corrigir</button>
+        </form>
+    </div>
+</body>
+</html>
